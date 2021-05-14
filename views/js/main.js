@@ -24,9 +24,9 @@ function getScore() {
         cup.classList.remove('align-flex-end');
         cup.classList.remove('align-flex-center');
         if (score == 1) {
-            alert("Good! You know have " + score + " point.")
+            alert("Good! You now have " + score + " point.")
         } else {
-            alert("Good! You know have " + score + " points.")
+            alert("Good! You now have " + score + " points.")
         }
     } else {
         alert("Game Over! Try Again.")
