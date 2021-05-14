@@ -10,24 +10,38 @@ function clearInformation() {
     console.log("Cleared");
 }
 
-function getScore() {
+function addScore() {
     var cup = document.querySelector(".gameCanvas");
+    cup.classList.remove('justify-flex-start');
+    cup.classList.remove('justify-flex-end');
+    cup.classList.remove('justify-flex-center');
+    cup.classList.remove('align-flex-start');
+    cup.classList.remove('align-flex-end');
+    cup.classList.remove('align-flex-center');
+    randomize();
+    clearInformation();
+    score += 1
+    console.log(score)
+    if (score == 1) {
+        alert("Good! You now have " + score + " point.")
+    } else {
+        alert("Good! You now have " + score + " points.")
+    }
+}
+
+function getScore() {
+    var inputJust = document.getElementById("inputJustify").value;
+    var inputAlign = document.getElementById("inputAlign").value;
+
     if (plateJust == cupJust && plateAlign == cupAlign) {
-        score += 1
-        console.log(score)
-        randomize();
-        clearInformation();
-        cup.classList.remove('justify-flex-start');
-        cup.classList.remove('justify-flex-end');
-        cup.classList.remove('justify-flex-center');
-        cup.classList.remove('align-flex-start');
-        cup.classList.remove('align-flex-end');
-        cup.classList.remove('align-flex-center');
-        if (score == 1) {
-            alert("Good! You now have " + score + " point.")
-        } else {
-            alert("Good! You now have " + score + " points.")
-        }
+        addScore()
+
+    } else if (plateJust == 1 && inputAlign == "" || plateJust == 2 && inputAlign == "" || plateJust == 3 && inputAlign == "" ) {
+        addScore()
+
+    } else if (plateAlign == 1 && inputJust == "" || plateAlign == 2 && inputJust == "" || plateAlign == 3 && inputJust == "" ) {
+        addScore()
+
     } else {
         alert("Game Over! Try Again.")
         score = 0;
@@ -99,21 +113,21 @@ function refresh() {
     var inputAlign = document.getElementById("inputAlign").value;
     var cup = document.querySelector(".gameCanvas");
 
-    if (inputJustify == "justify-content: flex-start;") {
+    if (inputJustify == "justify-content: flex-start;" || inputJustify == "justify-content:flex-start;") {
         cup.classList.remove('justify-flex-end');
         cup.classList.remove('justify-flex-center')
         cup.classList.add('justify-flex-start');
         console.log("true-start");
         cupJust = 1;
 
-    } else if (inputJustify == "justify-content: flex-end;") {
+    } else if (inputJustify == "justify-content: flex-end;" || inputJustify == "justify-content:flex-end;") {
         cup.classList.remove('justify-flex-start');
         cup.classList.remove('justify-flex-center');
         cup.classList.add('justify-flex-end');
         console.log("true-end");
         cupJust = 2;
 
-    } else if (inputJustify == "justify-content: center;") {
+    } else if (inputJustify == "justify-content: center;" || inputJustify == "justify-content:center;") {
         cup.classList.remove('justify-flex-start');
         cup.classList.remove('justify-flex-end');
         cup.classList.add('justify-flex-center');
@@ -127,21 +141,21 @@ function refresh() {
         console.log("false");
     }
 
-    if (inputAlign == "align-items: flex-start;") {
+    if (inputAlign == "align-items: flex-start;" || inputAlign == "align-items:flex-start;") {
         cup.classList.remove('align-flex-end');
         cup.classList.remove('align-flex-center');
         cup.classList.add('align-flex-start');
         console.log("true-start")
         cupAlign = 1;
 
-    } else if (inputAlign == "align-items: flex-end;") {
+    } else if (inputAlign == "align-items: flex-end;" || inputAlign == "align-items:flex-end;") {
         cup.classList.remove('align-flex-start');
         cup.classList.remove('align-flex-center');
         cup.classList.add('align-flex-end');
         console.log("true-end");
         cupAlign = 2;
 
-    } else if (inputAlign == "align-items: center;") {
+    } else if (inputAlign == "align-items: center;" || inputAlign == "align-items:center;") {
         cup.classList.remove('align-flex-start');
         cup.classList.remove('align-flex-end');
         cup.classList.add('align-flex-center');
