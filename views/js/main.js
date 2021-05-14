@@ -37,8 +37,8 @@ function randomize() {
     var plate = document.querySelector(".plate-location");
     var justify = Math.floor(Math.random() * (4 - 1) + 1); //The maximum is exclusive and the minimum is inclusive
     var align = Math.floor(Math.random() * (4 - 1) + 1);
-
-
+    document.getElementById("score").innerHTML = "Score: " + score;
+    
     if (justify == "1") {
         plate.classList.remove('justify-flex-end');
         plate.classList.remove('justify-flex-center')
@@ -91,7 +91,6 @@ function randomize() {
     if (justify == "1" && align == "1") {
         randomize()
     }
-
     console.log(plateAlign, plateJust)
 }
 
