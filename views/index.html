@@ -16,13 +16,13 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
 </head>
-<body>
+<body onload = randomize()>
     <div class = "main">
         <div class = "mainGame"> 
             <div class = "information">
                 <h1>Flexbox Game</h1>
-                <p>Welcome to my Flexbox Game. In this game, you will try to position the cup to the plate on the right by using the <b><u>justify-content</u></b> property of the Flexbox
-                    layout. This game will help you learn the basics of the justify-content property so you can design better and create more dynamic web pages. You can use the
+                <p>Welcome to my Flexbox Game. In this game, you will try to position the cup to the plate on the right by using the <b><u>justify-content</u></b> and <b><u>align-items</u></b> properties of the Flexbox
+                    layout. This game will help you learn the basics both properties so you can design better and create more dynamic web pages. You can use the
                     justify-content property followed by the values found below:
                 </p>
                 <ul>
@@ -35,11 +35,17 @@
                     <li>
                         <b><u>center:</u></b> Items align at the center of the container.
                     </li>
+                </ul>
+                <p>And align-items property followed by the values found below:</p>
+                <ul>
                     <li>
-                        <b><u>space-between:</u></b> Items display with equal spacing between them.
+                        <b><u>flex-start:</u></b> Items are positioned to the top of the container.
                     </li>
                     <li>
-                        <b><u>space-around:</u></b> Items display with equal spacing around them.
+                        <b><u>flex-end:</u></b> Items are positioned to the bottom of the container.
+                    </li>
+                    <li>
+                        <b><u>center:</u></b> Items are positioned at the center of the container.
                     </li>
                 </ul>
             </div>
@@ -88,14 +94,26 @@
                 <div class = "input-information">
                     <p>#Table {</p>
                     <p class = "tab">display: flex;</p>
-                    <input  class = "input-main" type = "text">
+                    <input  id = "inputJustify" class = "input-main" type = "text" placeholder="justify-content:" oninput= refresh()>
+                    <input  id = "inputAlign" oninput = refresh() class = "input-main" type = "text" placeholder="align-items:">
                     <p>}</p>
                 </div>
             </div> 
+
+            <div class = "buttons">
+
+            </div>
         </div> 
         
         <div class = "gameCanvas">
-    
+            <div class = "cup" id = "cup">
+
+            </div>
+        </div>
+        <div class = "plate-location">
+            <div class = "plate" id = "plate">
+
+            </div>
         </div>
     </div>
 </body>
