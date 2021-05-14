@@ -76,9 +76,21 @@
 }
 
 .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     height: 15vh;
     width: 100%;
     position: relative;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+    margin-top: 5%;
+    outline: none;
+    border: none;
+    border-radius: 2%;
 }
 
 .line-indicator{
@@ -141,6 +153,7 @@
     background-image: url(/views/pictures/cup.png);
     background-size: cover;
     margin-left: 10px;
+    margin-bottom: 10px;
     z-index: -1;
 }
 
@@ -151,6 +164,7 @@
     background-image: url(/views/pictures/plate.png);
     background-size: cover;
     margin-top: 10px;
+    margin-right: 5px;
 }
 
 .justify-flex-start {
@@ -175,4 +189,27 @@
 
 .align-flex-center {
     align-items: center;
+}
+
+.clear-button {
+    background-color: rgb(202, 202, 202);
+    margin-right: 5%;
+}
+
+.clear-button:hover {
+    background-color: rgb(228, 228, 228);
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: rgb(184, 255, 184);
+}
+
+.submit-button:hover {
+    background-color: rgb(50, 221, 50);
+    cursor: pointer;
+}
+
+.credits {
+    font-size: 15px;
 }
