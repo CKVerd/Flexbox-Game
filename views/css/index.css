@@ -45,3 +45,59 @@
 .information li {
     line-height: 22px;
 }
+
+.input-template {
+    margin-top: 5%;
+    height: 30vh;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+
+.line-indicator{
+    height: 100%;
+    width: 5%;
+    background-color: gray;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.line-indicator ul {
+    list-style-type: none;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 16px;
+}
+
+.line-indicator li {
+    color: rgb(235, 235, 235);
+    line-height: 25px;
+}
+
+.input-information {
+    width: 95%;
+    background-color: rgb(228, 228, 228);
+    padding-top: 0.5%;
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+
+.input-information p {
+    line-height: 25px;
+    margin-left: 2%;
+    color: rgb(114, 114, 114);
+}
+
+.tab {
+    text-indent: 40px;
+}
+
+.input-main {
+    margin-left: 40px;
+    border: none;
+    height: 25px;
+    font-size: 16px;
+    text-indent: 10px;
+}
