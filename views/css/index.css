@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgba(243, 243, 243, 0.707);
+}
+
+.gameCanvas {
+    position: absolute;
+    right: 50px;
+    display: flex;
+    width: 60vw;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.mainGame{
+    position: absolute;
+    left: 50px;
+    height: 90vh;
+    width: 32vw;
+    padding: 20px;
+}
+
+.information p{
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 25px;
+    margin-top: 2%;
+}
+
+.information ul{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.information li {
+    line-height: 22px;
+}
